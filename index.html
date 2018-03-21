@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Dashboard</title>
+		<!--bootstrap css-->
+		<link rel="stylesheet" type="text/css" href="assests/plugins/bootstrap/css/bootstrap.min.css">
+			<!--fontawesome css-->
+		<link rel="stylesheet" type="text/css" href="assests/plugins/font-awesome/css/font-awesome.min.css">
+			<!--simple-line-icon cs-->
+		<link rel="stylesheet" type="text/css" href="assests/plugins/simple-line-icons-master/css/simple-line-icons.css">
+			<!--main css-->
+			<link rel="stylesheet" type="text/css" href="assests/css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+					</li>
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Notifications
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Another action</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Something else here</a>
+							<li class="nav-item">
+									<a class="nav-link" href="#">Log Out</a>
+								</li>
+						</div>
+					</li>
+					
+				</ul>
+			
+			</div>
+		</nav>
+	</header>
+	<main>
+		<!--left aside-->
+		<aside class="left-aside">
+			<ul class="menus">
+				<li class="d-flex">
+					<i class="icon-chart"></i>
+					<p>Dashboard</p>
+				</li>
+				<li class="d-flex">
+						<i class="icon-layers"></i>
+						<p>Projects</p>
+					</li>
+					<li class="d-flex">
+							<i class="icon-wallet"></i>
+							<p>Transaction</p>
+							<li class="d-flex">
+									<i class="icon-user"></i>
+									<p>Profile</p>
+								</li>
+						</li>
+
+			</ul>
+		</aside>
+		<!--main section-->
+		<section class="main-section">
+			<div class="panels">
+				<!--left aside-->
+				<div class="row">
+					<div class="col">
+						<!--card-->
+						<div class="card">
+							<div class="card-body">
+								<div>
+									<h5 class="card-title">102</h5>
+									<h6 class="card-subtitle mb-2 text-muted">Projects</h6>
+									<hr>
+									<small>Last Week</small>
+								</div>
+								<i class="fa fa-briefcase"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<!--card-->
+						<div class="card">
+							<div class="card-body">
+								<div>
+									<h5 class="card-title">102</h5>
+									<h6 class="card-subtitle mb-2 text-muted">Projects</h6>
+									<hr>
+									<small>Last Week</small>
+								</div>
+								<i class="fa fa-briefcase"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<!--card-->
+						<div class="card">
+							<div class="card-body">
+								<div>
+									<h5 class="card-title">102</h5>
+									<h6 class="card-subtitle mb-2 text-muted">Projects</h6>
+									<hr>
+									<small>Last Week</small>
+								</div>
+								<i class="fa fa-briefcase"></i>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<!--card-->
+						<div class="card">
+							<div class="card-body">
+								<div>
+									<h5 class="card-title">102</h5>
+									<h6 class="card-subtitle mb-2 text-muted">Projects</h6>
+									<hr>
+									<small>Last Week</small>
+								</div>
+								<i class="fa fa-briefcase"></i>
+							</div>
+						</div>
+						</div>
+
+				</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+	</main>
+
+
+
+		<!--jquery js-->
+		<script src = "assests/plugins/jquery.min.js"></script>
+			<!--popper js-->
+		<script src = "assests/plugins/popper.min.js"></script>
+			<!--bootstrap js-->
+		<script src = "assests/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src = "assests/plugins/notify.min.js"></script>
+
+		<script src = "assests/js/main.js"></script>
+		<script>
+			$(document).ready(function(){
+				var msg = 'Good';
+				var _hour = new Date ().getHours();
+				if(_hour >= 1 && _hour < 12){
+					msg += 'Morning';
+				}
+				if(_hour >= 12 && _hour < 16){
+					msg += 'Afternoon';
+				}
+				if(_hour >= 16 && _hour < 19){
+					msg += 'Evening';
+				}
+				if(_hour >= 19){
+					msg += 'Night';
+				}
+				console.log(msg);
+
+				$.notify(msg + '  ' +'Vivian');
+
+			});
+		</script>
+
+
+    
+</body>
+</html>
